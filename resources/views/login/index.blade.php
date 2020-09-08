@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>login</title>
+  <title>FaceClone</title>
+
+  <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-	
-	<h1>login</h1>
-	
-	<form method="post">
 
-		<!-- @csrf -->
+  <!-- main -->
+  <main class="container">
+
+  </main>
+  <!-- ./main -->
+	<form method="post" action="/login">
+
+		@csrf
 		<!-- {{csrf_field()}} -->
 		<input type="hidden" name="_token" value="{{csrf_token()}}">
-
+		<h3>LOGIN</h3>
 		<table>
 			<tr>
 				<td>Username</td>
@@ -30,5 +36,7 @@
 	</form>
 
 	{{session('msg')}}
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>

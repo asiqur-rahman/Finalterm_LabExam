@@ -15,6 +15,11 @@ class VerifySessionForEmployee
      */
     public function handle($request, Closure $next)
     {
-        return $next($request);
+      if($request->session()->get('usertype')=="employee"){
+          return $next($request);
+        }
+      else {
+          return redirect('/login');
+      }
     }
 }

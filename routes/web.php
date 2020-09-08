@@ -12,7 +12,15 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+Route::get('/', 'LoginController@index')->name('login.index');
 Route::get('/login', 'LoginController@index')->name('login.index');
 Route::post('/login', 'LoginController@verify')->name('login.index');
 Route::get('/logout', ['as'=>'logout.index', 'uses'=>'logoutController@index']);
+
+Route::middleware(['sessionForAdmin'])->group(function(){
+	 Route::get('/admin/index', 'AdminController@index')->name('admin.index');
+ 	 // Route::post('/home/edit/{id}', 'HomeController@update');
+	// Route::get('/home/delete/{id}', 'HomeController@delete');
+	// Route::post('/home/delete/{id}', 'HomeController@destroy');
+
+});

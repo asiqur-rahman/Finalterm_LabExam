@@ -15,6 +15,11 @@ class VerifySessionForAdmin
      */
     public function handle($request, Closure $next)
     {
-        return $next($request);
+      if($request->session()->get('usertype')=="admin"){
+          return $next($request);
+        }
+      else {
+          return redirect('/login');
+      }
     }
 }
