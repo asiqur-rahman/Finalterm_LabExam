@@ -21,7 +21,7 @@ Route::middleware(['sessionForAdmin'])->group(function(){
 	 Route::get('/admin/index', 'AdminController@index')->name('admin.index');
    Route::get('/admin/register', 'AdminController@register')->name('admin.register');
    Route::post('/admin/register', 'AdminController@registeremployee');
- 	 // Route::post('/home/edit/{id}', 'HomeController@update');
+ 	 Route::get('/admin/update/employee/{id}', 'HomeController@update');
 	// Route::get('/home/delete/{id}', 'HomeController@delete');
 	// Route::post('/home/delete/{id}', 'HomeController@destroy');
 

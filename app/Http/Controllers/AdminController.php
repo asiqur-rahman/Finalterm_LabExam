@@ -51,18 +51,18 @@ class AdminController extends Controller
                         ->withtitle("Users Report | Admin");
   }
   function register(){
-    return view()->route('admin.register');
+    return view('registeremployee');
   }
   function registeremployee(Request $request){
     $affected = DB::table('users')
               ->insert(['username' => $request->username,'password' => $request->password,'usertype' => 'employee','companyname' => $request->companyname,'contactno' => $request->contactno]);
 
     if($affected>0){
-      $request->session()->flash('status', 'Update successfully!');
-      return redirect()->route('admin.register');
+      //$request->session()->flash('status', 'Update successfully!');
+      return redirect()->route('admin.index');
     }
     else{
-      return redirect()->route('admin.register');
+      return redirect()->route('admin.index');
     }
   }
 

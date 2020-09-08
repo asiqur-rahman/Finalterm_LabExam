@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>FaceClone</title>
+  <title>Register</title>
 
   <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
   <link rel="stylesheet" href="/css/style.css">
@@ -24,7 +24,7 @@
 
   </main>
   <!-- ./main -->
-	<form method="post" action="/login">
+	<form method="post" >
 
 		@csrf
 		<!-- {{csrf_field()}} -->
@@ -59,7 +59,5 @@
 	</form>
 
 	{{session('msg')}}
-  <script type="text/javascript" src="js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>
