@@ -12,6 +12,7 @@
     <div class="container-fluid">
 
       <ul class="nav navbar-nav navbar-right">
+        <li><a href="/admin/update">Update My Account</a></li>
         <li><a href="/admin/index">Employee List</a></li>
         <li><a href="/admin/register">Register New Employee</a></li>
         <li><a href="/logout">Logout</a></li>
@@ -33,23 +34,23 @@
 		<table>
 			<tr>
 				<td>Username</td>
-				<td><input type="text" name="username"></td>
+				<td><input type="text" name="username" required></td>
 			</tr>
 			<tr>
 				<td>Password</td>
-				<td><input type="password" name="password"></td>
+				<td><input type="password" name="password" required></td>
 			</tr>
       <tr>
 				<td>Name</td>
-				<td><input type="text" name="name"></td>
+				<td><input type="text" name="name" required></td>
 			</tr>
       <tr>
 				<td>Company Name</td>
-				<td><input type="text" name="companyname"></td>
+				<td><input type="text" name="companyname" required></td>
 			</tr>
       <tr>
 				<td>Contact No</td>
-				<td><input type="text" name="contactno"></td>
+				<td><input type="text" name="contactno" required></td>
 			</tr>
 			<tr>
 				<td></td>

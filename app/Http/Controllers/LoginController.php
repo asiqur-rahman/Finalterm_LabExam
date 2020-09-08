@@ -30,9 +30,9 @@ class LoginController extends Controller
                 $request->session()->put('userid', $data[0]->id);
                 return redirect()->route('admin.index');
             }
-            else if($data[0]->usertype == "manager")
+            else if($data[0]->usertype == "employee")
             {
-                $request->session()->put('type', "manager");
+                $request->session()->put('usertype', "employee");
                 $request->session()->put('userid', $data[0]->id);
                 return redirect()->route('employee.index');
             }

@@ -12,6 +12,7 @@
     <div class="container-fluid">
 
       <ul class="nav navbar-nav navbar-right">
+        <li><a href="/admin/update">Update My Account</a></li>
         <li><a href="/admin/index">Employee List</a></li>
         <li><a href="/admin/register">Register New Employee</a></li>
         <li><a href="/logout">Logout</a></li>
@@ -24,7 +25,7 @@
 
   </main>
   <!-- ./main -->
-  <form action="" method="post">
+  <form method="post">
     {{ csrf_field() }}
   <table>
     <tbody>

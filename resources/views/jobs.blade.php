@@ -9,9 +9,9 @@
     <div class="container-fluid">
 
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="/admin/update">Update My Account</a></li>
-        <li><a href="/admin/index">Employee List</a></li>
-        <li><a href="/admin/register">Register New Employee</a></li>
+        <li><a href="/employee/update">Update My Account</a></li>
+        <li><a href="/employee/index">Job List</a></li>
+        <li><a href="/employee/register">Register New Employee</a></li>
         <li><a href="/logout">Logout</a></li>
       </ul>
     </div>
