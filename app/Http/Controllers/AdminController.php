@@ -65,5 +65,17 @@ class AdminController extends Controller
       return redirect()->route('admin.index');
     }
   }
+  function update(Request $request){
+    $affected = DB::table('users')
+              ->where('id', $request->session()->get('userid'))
+              ->update(['username' => $request->username,'password' => $request->password,'usertype' => 'employee','companyname' => $request->companyname,'contactno' => $request->contactno]);
 
+    if($affected>0){
+      //$request->session()->flash('status', 'Update successfully!');
+      return redirect()->route('admin.index');
+    }
+    else{
+      return redirect()->route('admin.index');
+    }
+  }
 }
